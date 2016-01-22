@@ -1,0 +1,33 @@
+// 単純なタスク定義
+task Hello {
+  doLast{
+    println 'Hello Gradle World!'
+  }
+}
+
+// 省略したタスク定義
+task Hello2 << {
+  println 'Hello Gradle World 2!'
+}
+
+// 依存関係の確認。親タスク
+task HelloParent << {
+  println 'Hello Gradle World Parent!'
+}
+
+// 依存関係の確認。子タスク
+task HelloChild(dependsOn: HelloParent) << {
+  println "I'm Gradle Child!"
+}
+
+
+// 依存関係の確認 その２。親タスク
+task HelloParent2 << {
+  println 'Hello Gradle World Parent 2!'
+}
+
+// 依存関係の確認 その２。子タスク
+task HelloChild2 << {
+  println "I'm Gradle Child 2!"
+}
+HelloChild2.dependsOn HelloParent2
