@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+task PrintInfo << {
+}
+
+sourceSets {
+  main {
+    java.srcDirs 'src'
+    println java.srcDirs
+  }
+  
+  raccoon {
+    java.srcDirs 'src'
+    println java.srcDirs
+  }
+}
+
