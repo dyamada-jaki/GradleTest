@@ -12,7 +12,7 @@ public class TestProduct01 {
 		Product01 p01 = new Product01();
 		
 		int res = p01.add(1, 2);
-		assertThat(res, is(3));
+		assertThat(res, is(4));
 	}
 
 }

@@ -1,5 +1,9 @@
 // 単純なタスク定義
 task Hello {
+  doFirst{
+    println 'Hello Gradle World!'
+  }
+
   doLast{
     println 'Hello Gradle World!'
   }
