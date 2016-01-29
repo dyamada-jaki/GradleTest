@@ -10,7 +10,6 @@ sourceSets {
   }
   
   raccoon {
-    java.srcDirs 'src'
     println java.srcDirs
   }
 }
